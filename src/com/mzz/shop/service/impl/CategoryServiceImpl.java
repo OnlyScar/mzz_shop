@@ -1,6 +1,7 @@
 package com.mzz.shop.service.impl;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 import com.mzz.shop.model.Category;
 import com.mzz.shop.service.CategoryService;
@@ -29,6 +30,26 @@ public class CategoryServiceImpl implements CategoryService {
             HibernateSessionFactory.closeSession();
         }       
 
+	}
+	
+	/*Spring和Hibernate整个后*/
+    private SessionFactory sessionFactory; //定义一个sessionFactory
+    
+    //当需要使用sessoinFactory的时候，Spring会将sessionFactory注入进来
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+    
+    protected Session getSession() {
+        //从当前线程获取session，如果没有则创建一个新的session
+        return sessionFactory.getCurrentSession();
+    }
+    
+    
+	@Override
+	public void update(Category category) {
+		// TODO Auto-generated method stub
+		getSession().update(category);
 	}
 
 }

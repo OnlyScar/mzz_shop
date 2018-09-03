@@ -24,6 +24,15 @@ public class Category implements java.io.Serializable {
 		this.hot = hot;
 	}
 
+	
+	
+	public Category(Integer id, String type, Boolean hot) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.hot = hot;
+	}
+
 	// Property accessors
 
 	public Integer getId() {
