@@ -1,4 +1,4 @@
-package mzz.shop.test;
+package com.mzz.shop.test;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

@@ -1,4 +1,4 @@
-package mzz.shop;
+package com.mzz.shop.test;
 
 import java.util.Date;
 
@@ -39,7 +39,8 @@ public class SSHTest {
 
 	@Test //测试Hibernate和Spring整合后
 	public void hibernateAndSpring() {
-		categoryService.update(new Category( 1,"休闲女式", true)); //categoryService通过Spring从上面注入进来的
+		
+		categoryService.update(new Category( 1,"休闲2女式", true)); //categoryService通过Spring从上面注入进来的
 	}
 
 	

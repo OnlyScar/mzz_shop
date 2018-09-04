@@ -5,8 +5,7 @@ import org.hibernate.SessionFactory;
 
 import com.mzz.shop.model.Category;
 import com.mzz.shop.service.CategoryService;
-
-import mzz.shop.test.HibernateSessionFactory;
+import com.mzz.shop.test.HibernateSessionFactory;
 
 public class CategoryServiceImpl implements CategoryService {
 
